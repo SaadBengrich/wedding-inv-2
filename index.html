@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Invitation au mariage de Houda & Youssef — 22 août 2026, Jnane Moulana." />
+  <title>Houda & Youssef — 22.08.2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="scroll-locked">
+
+  <!-- ============ INTRO: Bismillah + sealed-envelope opening ============ -->
+  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-label="Touch the wax seal to open the invitation">
+    <div class="intro-bg" aria-hidden="true"></div>
+    <div class="intro-glow" aria-hidden="true"></div>
+
+    <!-- Islamic opening: Bismillah -->
+    <div class="bismillah">
+      <p class="bismillah-text" lang="ar" dir="rtl">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+      <p class="bismillah-sub"
+         data-fr="Au nom d'Allah le Tout-Puissant, le Très-Miséricordieux"
+         data-ar="بسم الله نبدأ، وعلى بركته نسير">
+        Au nom d'Allah le Tout-Puissant, le Très-Miséricordieux
+      </p>
+    </div>
+
+    <!-- The sealed envelope -->
+    <div class="envelope" id="envelope">
+      <div class="env-body" aria-hidden="true"></div>
+
+      <!-- The letter that slides up when the seal is broken -->
+      <div class="env-letter" id="env-letter" aria-hidden="true">
+        <div class="letter-frame">
+          <!-- Decorative corners -->
+          <span class="letter-corner letter-corner-tl" aria-hidden="true"></span>
+          <span class="letter-corner letter-corner-tr" aria-hidden="true"></span>
+          <span class="letter-corner letter-corner-bl" aria-hidden="true"></span>
+          <span class="letter-corner letter-corner-br" aria-hidden="true"></span>
+
+          <div class="letter-inner">
+            <!-- Top ornament -->
+            <svg class="letter-ornament" viewBox="0 0 200 24" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                <line x1="20" y1="12" x2="85" y2="12" stroke-opacity="0.7"/>
+                <line x1="115" y1="12" x2="180" y2="12" stroke-opacity="0.7"/>
+                <g transform="translate(100,12)">
+                  <path d="M0,-9 L2.5,-2.5 L9,0 L2.5,2.5 L0,9 L-2.5,2.5 L-9,0 L-2.5,-2.5 Z" fill="currentColor"/>
+                  <circle r="4" fill="none" stroke-opacity="0.6"/>
+                </g>
+              </g>
+            </svg>
+
+            <p class="letter-eyebrow"
+               data-fr="Nous avons l'honneur de vous convier au mariage de"
+               data-ar="يشرفنا دعوتكم لحضور حفل زفاف">
+              Nous avons l'honneur de vous convier au mariage de
+            </p>
+
+            <p class="letter-names">
+              <span class="ln-first">Houda</span>
+              <span class="ln-amp">&amp;</span>
+              <span class="ln-second">Youssef</span>
+            </p>
+
+            <p class="letter-date-line">
+              <span class="letter-date-day"
+                    data-fr="Samedi"
+                    data-ar="السبت">Samedi</span>
+              <span class="letter-date-num">22 août 2026</span>
+            </p>
+
+            <!-- Bottom ornament -->
+            <svg class="letter-ornament letter-ornament-bottom" viewBox="0 0 200 24" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+                <line x1="20" y1="12" x2="85" y2="12" stroke-opacity="0.7"/>
+                <line x1="115" y1="12" x2="180" y2="12" stroke-opacity="0.7"/>
+                <g transform="translate(100,12)">
+                  <path d="M0,-9 L2.5,-2.5 L9,0 L2.5,2.5 L0,9 L-2.5,2.5 L-9,0 L-2.5,-2.5 Z" fill="currentColor"/>
+                  <circle r="4" fill="none" stroke-opacity="0.6"/>
+                </g>
+              </g>
+            </svg>
+
+            <p class="letter-place"
+               data-fr="Jnane Moulana"
+               data-ar="جنان مولانا">
+              Jnane Moulana
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flap (triangle that folds open from its top edge) -->
+      <div class="env-flap" id="env-flap" aria-hidden="true"></div>
+
+      <!-- The special clickable element: a Moroccan-Islamic wax seal -->
+      <button id="intro-open" class="wax-seal" aria-label="Briser le sceau et ouvrir l'invitation">
+        <span class="seal-pulse" aria-hidden="true"></span>
+        <span class="seal-pulse seal-pulse-2" aria-hidden="true"></span>
+        <svg class="seal-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <defs>
+            <radialGradient id="sealWax" cx="38%" cy="32%" r="68%">
+              <stop offset="0%"   stop-color="#C4577A"/>
+              <stop offset="55%"  stop-color="#7E1A3E"/>
+              <stop offset="100%" stop-color="#38071B"/>
+            </radialGradient>
+            <linearGradient id="sealGold" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%"   stop-color="#F4D88B"/>
+              <stop offset="100%" stop-color="#A88845"/>
+            </linearGradient>
+          </defs>
+          <!-- Wax body -->
+          <circle cx="50" cy="50" r="49" fill="url(#sealWax)"/>
+          <!-- 8-pointed Islamic star (rub el hizb style) -->
+          <g fill="none" stroke="url(#sealGold)" stroke-width="1.4" stroke-linejoin="round">
+            <path d="M50,10 L60,30 L82,20 L72,42 L90,50 L72,58 L82,80 L60,70 L50,90 L40,70 L18,80 L28,58 L10,50 L28,42 L18,20 L40,30 Z"/>
+            <circle cx="50" cy="50" r="22"/>
+            <circle cx="50" cy="50" r="13"/>
+          </g>
+          <!-- Monogram -->
+          <text x="50" y="56" text-anchor="middle"
+                font-family="Cormorant Garamond, serif"
+                font-size="13" font-style="italic" font-weight="600"
+                fill="url(#sealGold)">H &amp; Y</text>
+        </svg>
+      </button>
+    </div>
+
+    <p class="seal-hint">
+      <span class="seal-hint-arrow" aria-hidden="true">↑</span>
+      <span data-fr="Touchez le sceau pour ouvrir"
+            data-ar="انقر على الختم لفتح الدعوة">
+        Touchez le sceau pour ouvrir
+      </span>
+    </p>
+  </div>
+
+  <!-- Floating decorative shapes for parallax depth -->
+  <div class="parallax-world" aria-hidden="true">
+    <div class="float-shape fs-1" data-parallax="0.18"></div>
+    <div class="float-shape fs-2" data-parallax="0.32"></div>
+    <div class="float-shape fs-3" data-parallax="0.12"></div>
+    <div class="float-shape fs-4" data-parallax="0.25"></div>
+    <div class="float-shape fs-5" data-parallax="0.4"></div>
+  </div>
+
+  <!-- Gently falling flower petals -->
+  <div class="petals" aria-hidden="true">
+    <svg class="petal petal-1" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-2" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-3" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-4" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-5" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-6" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-7" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+    <svg class="petal petal-8" viewBox="0 0 32 32"><path d="M16 2c6 4 8 10 4 16-4 6-10 6-14 0-2-4 0-9 4-13 2-2 4-3 6-3z" fill="currentColor"/></svg>
+  </div>
+
+  <!-- Floating language toggle (no nav bar) -->
+  <button id="lang-toggle" class="lang-float" aria-label="Changer de langue">
+    <span data-active="fr">FR</span>
+    <span class="lang-sep" aria-hidden="true">·</span>
+    <span data-active="ar">ع</span>
+  </button>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="kicker" data-fr="Nous nous marions" data-ar="سنتزوج">Nous nous marions</p>
+      <h1 class="names">
+        <span>Houda</span>
+        <span class="amp">&amp;</span>
+        <span>Youssef</span>
+      </h1>
+      <p class="date">22 · 08 · 2026</p>
+      <p class="place" data-fr="Jnane Moulana, Maroc" data-ar="جنان مولانا، المغرب">Jnane Moulana, Maroc</p>
+
+      <!-- Countdown -->
+      <div class="countdown" aria-live="polite">
+        <div><strong id="cd-days">--</strong><span data-fr="Jours" data-ar="يوم">Jours</span></div>
+        <div><strong id="cd-hours">--</strong><span data-fr="Heures" data-ar="ساعة">Heures</span></div>
+        <div><strong id="cd-mins">--</strong><span data-fr="Minutes" data-ar="دقيقة">Minutes</span></div>
+        <div><strong id="cd-secs">--</strong><span data-fr="Secondes" data-ar="ثانية">Secondes</span></div>
+      </div>
+
+    </div>
+    <div class="scroll-hint" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- ============ DATES CLÉS ============ -->
+  <section id="dates" class="section reveal">
+    <div class="container narrow">
+      <ol class="timeline">
+        <li>
+          <span class="t-time">08.05.2026</span>
+          <div>
+            <h3 data-fr="Rencontre des familles" data-ar="لقاء العائلتين">Rencontre des familles</h3>
+          </div>
+        </li>
+        <li>
+          <span class="t-time">22.08.2026</span>
+          <div>
+            <h3 data-fr="Le grand jour" data-ar="اليوم الكبير">Le grand jour</h3>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ LIEU ============ -->
+  <section id="lieu" class="section reveal">
+    <div class="container">
+      <svg class="section-flower" viewBox="0 0 60 40" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+          <path d="M2 20 H22" stroke-opacity="0.6"/>
+          <path d="M38 20 H58" stroke-opacity="0.6"/>
+        </g>
+        <g transform="translate(30,20)" fill="currentColor">
+          <path d="M0,-9 C3,-9 5,-6 3,-3 C6,-4 9,-2 8,1 C7,4 3,4 1,2 C1,5 -2,7 -4,5 C-6,3 -5,0 -2,-1 C-5,-1 -8,-3 -7,-6 C-6,-9 -3,-9 0,-6 C-1,-8 -1,-9 0,-9 Z" opacity="0.9"/>
+          <circle r="1.6" fill="var(--ivory)"/>
+        </g>
+      </svg>
+      <p class="eyebrow" data-fr="Le lieu" data-ar="المكان">Le lieu</p>
+      <h2>Jnane Moulana</h2>
+      <p class="lead" data-fr="Piscine privée chauffée, jardin & vue Atlas." data-ar="مسبح خاص مدفأ، حديقة وإطلالة على الأطلس.">
+        Piscine privée chauffée, jardin &amp; vue Atlas.
+      </p>
+
+      <div class="map-wrap">
+        <iframe
+          title="Carte — Jnane Moulana"
+          src="https://www.google.com/maps?q=Jnane+Moulana+Morocco&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+
+      <div class="cta-row">
+        <a href="https://maps.apple/p/sNGxi0__EFEAVz" target="_blank" rel="noopener" class="btn btn-outline" data-fr="Itinéraire" data-ar="الاتجاهات">Itinéraire →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DRESS CODE ============ -->
+  <section id="dresscode" class="section section-alt reveal">
+    <div class="container narrow">
+      <svg class="section-flower" viewBox="0 0 60 40" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+          <path d="M2 20 H22" stroke-opacity="0.6"/>
+          <path d="M38 20 H58" stroke-opacity="0.6"/>
+        </g>
+        <g transform="translate(30,20)" fill="currentColor">
+          <path d="M0,-9 C3,-9 5,-6 3,-3 C6,-4 9,-2 8,1 C7,4 3,4 1,2 C1,5 -2,7 -4,5 C-6,3 -5,0 -2,-1 C-5,-1 -8,-3 -7,-6 C-6,-9 -3,-9 0,-6 C-1,-8 -1,-9 0,-9 Z" opacity="0.9"/>
+          <circle r="1.6" fill="var(--ivory)"/>
+        </g>
+      </svg>
+      <p class="eyebrow" data-fr="Tenue" data-ar="اللباس">Tenue</p>
+      <h2 data-fr="Élégance traditionnelle" data-ar="أناقة تقليدية">Élégance traditionnelle</h2>
+
+      <div class="dress-grid">
+        <div class="dress-card">
+          <span class="dress-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="40" height="40">
+              <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                <path d="M22 8 L18 16 L14 50 L32 56 L50 50 L46 16 L42 8 L36 12 L32 8 L28 12 Z"/>
+                <path d="M32 12 L32 56"/>
+                <circle cx="32" cy="22" r="2" fill="currentColor"/>
+                <circle cx="32" cy="32" r="2" fill="currentColor"/>
+                <circle cx="32" cy="42" r="2" fill="currentColor"/>
+              </g>
+            </svg>
+          </span>
+          <p class="dress-for" data-fr="Pour elles" data-ar="للنساء">Pour elles</p>
+          <p class="dress-style"
+             data-fr="Caftan ou takchita"
+             data-ar="قفطان أو تكشيطة">Caftan ou takchita</p>
+        </div>
+
+        <div class="dress-card">
+          <span class="dress-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="40" height="40">
+              <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+                <path d="M20 10 L14 18 L14 56 L50 56 L50 18 L44 10 L36 14 L32 10 L28 14 Z"/>
+                <path d="M32 14 L32 56"/>
+                <path d="M26 22 L32 30 L38 22"/>
+              </g>
+            </svg>
+          </span>
+          <p class="dress-for" data-fr="Pour eux" data-ar="للرجال">Pour eux</p>
+          <p class="dress-style"
+             data-fr="Jellaba ou costume"
+             data-ar="جلابة أو بدلة">Jellaba ou costume</p>
+        </div>
+      </div>
+
+      <div class="dress-color">
+        <div class="dress-color-text">
+          <p class="dress-color-title"
+             data-fr="Couleurs au choix"
+             data-ar="الألوان حسب الذوق">Couleurs au choix</p>
+          <p class="dress-color-sub"
+             data-fr="… toutes sauf le blanc, réservé à la mariée."
+             data-ar="… ما عدا الأبيض، فهو خاص بالعروس.">
+            … toutes sauf le blanc, réservé à la mariée.
+          </p>
+        </div>
+        <span class="no-white" aria-hidden="true">
+          <span class="nw-circle"></span>
+          <span class="nw-slash"></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VERSET DU CORAN ============ -->
+  <section id="verset" class="section reveal">
+    <div class="container narrow">
+      <svg class="section-flower" viewBox="0 0 60 40" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round">
+          <path d="M2 20 H22" stroke-opacity="0.6"/>
+          <path d="M38 20 H58" stroke-opacity="0.6"/>
+        </g>
+        <g transform="translate(30,20)" fill="currentColor">
+          <path d="M0,-9 C3,-9 5,-6 3,-3 C6,-4 9,-2 8,1 C7,4 3,4 1,2 C1,5 -2,7 -4,5 C-6,3 -5,0 -2,-1 C-5,-1 -8,-3 -7,-6 C-6,-9 -3,-9 0,-6 C-1,-8 -1,-9 0,-9 Z" opacity="0.9"/>
+          <circle r="1.6" fill="var(--ivory)"/>
+        </g>
+      </svg>
+      <p class="eyebrow" data-fr="Verset du Coran" data-ar="آية قرآنية">Verset du Coran</p>
+      <p class="verset-text" lang="ar" dir="rtl">
+        وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ
+      </p>
+      <p class="verset-translation"
+         data-fr="« Et parmi Ses signes, Il a créé pour vous, à partir de vous-mêmes, des épouses pour que vous viviez en tranquillité avec elles, et Il a mis entre vous de l'affection et de la miséricorde. Il y a en cela des signes pour des gens qui réfléchissent. »"
+         data-ar="«وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ»">
+        « Et parmi Ses signes, Il a créé pour vous, à partir de vous-mêmes, des épouses pour que vous viviez en tranquillité avec elles, et Il a mis entre vous de l'affection et de la miséricorde. Il y a en cela des signes pour des gens qui réfléchissent. »
+      </p>
+      <p class="verset-ref" data-fr="Sourate Ar-Rum, 30:21" data-ar="سورة الروم، ٣٠:٢١">Sourate Ar-Rum, 30:21</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
