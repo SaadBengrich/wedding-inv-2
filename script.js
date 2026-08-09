@@ -1,5 +1,5 @@
 /* ============================================================
-   Houda & Youssef — 22.08.2026
+   Ikram & Youness — 18.10.2026
    Interactivity: countdown, language toggle, scroll reveals,
                   RSVP form.
    ============================================================ */
@@ -40,7 +40,7 @@
 
   // ---------- 1. Countdown ----------
   // Wedding date — local time. Adjust hour if needed.
-  const WEDDING_DATE = new Date("2026-08-22T20:00:00");
+  const WEDDING_DATE = new Date("2026-10-18T13:00:00");
 
   const cd = {
     days:  document.getElementById("cd-days"),
